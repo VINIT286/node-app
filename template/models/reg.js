@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const RegSchema = new mongoose.Schema({
+const RegSchema=new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -22,6 +22,6 @@ const RegSchema = new mongoose.Schema({
         type:String,
         required:true,
     
-    },
+    }
 })
 export default mongoose.model('Reg',RegSchema)

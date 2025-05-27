@@ -15,7 +15,7 @@ function home(req,res){
     let a=[5,6,87,455,56]
     res.render('home',{a})
 }
-const adddata=(req,res)=>{
+function adddata(req,res){
     res.render("adddata")
 }
 const subdata = async(req,res)=>{
@@ -24,7 +24,7 @@ const subdata = async(req,res)=>{
     await User.create({name,email})
     res.redirect("/")
 }
-const showreg=(req,res)=>{
+function showreg(req,res){
     res.render("registration")
 }
 const regdata = async(req,res)=>{
@@ -38,8 +38,7 @@ const regdata = async(req,res)=>{
 }
 
 const getregdata = async(req,res)=>{
-    let d= await Reg.find()
-    res.json(d)
+    let d=await Reg.find()
     res.render("showdata",{d})
 }
 // module.exports = {about,contact,home}

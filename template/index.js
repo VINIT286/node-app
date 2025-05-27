@@ -13,7 +13,7 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
-mongoose.connect('mongodb://localhost:27017/webdatabase')
+mongoose.connect('mongodb://localhost:27017/data')
 .then(()=>console.log("mongodb connect"))
 .catch((err)=>console.log("mongodb not connect"))
 
